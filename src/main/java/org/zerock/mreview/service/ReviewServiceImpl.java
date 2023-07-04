@@ -2,6 +2,7 @@ package org.zerock.mreview.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.mreview.dto.ReviewDTO;
 import org.zerock.mreview.entity.Movie;
@@ -16,6 +17,8 @@ import java.util.stream.Collectors;
 @Log4j2
 @RequiredArgsConstructor
 public class ReviewServiceImpl implements ReviewService{
+
+    @Autowired
     private final ReviewRepository reviewRepository;
 
     @Override
